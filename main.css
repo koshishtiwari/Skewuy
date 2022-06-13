@@ -36,9 +36,12 @@ body{
 #card-hero{
     width: 100%;
     height: 240px;
-    background: #a0d8d8;
+    background: #c6e9e9;
+    background-image: url(assets/spriteer.png);
+    background-size: cover;
     margin-bottom: 20px;
     border-radius: 10px;
+    background-position: -86px 0;
 }
 
 #priceTag{
