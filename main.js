@@ -4,44 +4,41 @@ window.onload = function() {
     let spriteObj = $("#card-hero");
     
     const frameGutter = 86;
-    const frameWidth = -428-frameGutter;
-    let multiplier = 1;
-    let backPos;
+    // const frameWidth = -428-frameGutter;
+    // let backPos = -86;
 
-    
+    console.log(spriteObj.css("background-position-x"));
     
     // midpoint spriteObj -- use as origin
-    const originNew = spriteObj[0].clientWidth/2;
-
+    const originNew = spriteObj[0].clientWidth;
+    // console.log(spriteObj[0].clientWidth);
+    const initialPos = parseInt(spriteObj.css("background-position-x"));
 
     spriteObj.on("mouseover", function(e){
-        // spriteObj.on("mousemove", function (event) {
-        //     let mousePos = event.offsetX - originNew;
-        //     if (mousePos >= 0) {
-        //         skewyMaker();
-        //     } else {
+        spriteObj.on("mousemove", function (event) {
 
-        //     }
+            // divide the range of Mouse offsetX into 12(=>frameNo) equal fragments
+            let mousePos = Math.trunc((event.offsetX/originNew) * 12); // total frames = 12
+            
+
+            let multiplier = 6 - mousePos; // half of total frame number = 6;
+
+            if (multiplier == undefined || multiplier == 6) {
+                multiplier = 5;
+            }
+
+            console.log(multiplier);
+
+            let newPos = initialPos + (multiplier * 427)  // framewidth = 427
+            let newPosCss = newPos + "px";
+            console.log(newPosCss);
+            spriteObj.css("background-position-x", newPosCss);
         
-        // })
-        
+        })
     })
 
-    // animator
-    function skewyMaker(timecount) {
-        
-        if (multiplier < 12) {
-            multiplier++;
-        } else if (multiplier == 12) {
-            multiplier = 1;
-        }
-        console.log(parseInt(timecount));
-        backPos = multiplier * frameWidth + "px" + " 0";
-        spriteObj[0].style.backgroundPosition = backPos;
-
-        window.requestAnimationFrame(skewyMaker);
-    }
 
 
-    // spriteObj.style.backgroundPosition = backPos;
-}
+    
+
+} // document load
