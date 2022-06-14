@@ -1,3 +1,8 @@
+:root{
+    --frameGutter:  86px;
+    --frameWidth: calc(-428 - var(--frameGutter));
+}
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -44,6 +49,13 @@ body{
     background-position: -86px 0;
 }
 
+.slidey{
+    animation-name: slideXY;
+    animation-duration: 0.7s;
+    animation-timing-function: steps(1, jump-start);
+    animation-iteration-count: infinite;
+}
+
 #priceTag{
     color: #84b053;
     font-size: 0.9em;
@@ -54,4 +66,19 @@ body{
     font-family: 'Dosis', sans-serif;;
     color: #5f5f5f;
     line-height: 1.4em;
+}
+
+@keyframes slideXY {
+    0% {background-position: 1*var(--frameWidth)px 0;}
+    9% {background-position: 2*var(--frameWidth)px 0;}
+    18% {background-position: 3*var(--frameWidth)px 0;}
+    27% {background-position: 4*var(--frameWidth)px 0;}
+    36% {background-position: 5*var(--frameWidth)px 0;}
+    45% {background-position: 6*var(--frameWidth)px 0;}
+    54% {background-position: 7*var(--frameWidth)px 0;}
+    65% {background-position: 8*var(--frameWidth)px 0;}
+    73% {background-position: 9*var(--frameWidth)px 0;}
+    81% {background-position: 10*var(--frameWidth)px 0;}
+    90% {background-position: 11*var(--frameWidth)px 0;}
+    100% {background-position: 12*var(--frameWidth)px 0;}
 }
