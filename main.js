@@ -1,4 +1,4 @@
-// document ready
+
 window.onload = function() {
     // the sprite image
     let spriteObj = $("#card-hero");
@@ -41,4 +41,4 @@ window.onload = function() {
 
     
 
-} // document load
+} // document load=======
