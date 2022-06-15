@@ -1,3 +1,11 @@
+:root{
+    --headingColor: #555555;
+    --bgColor: #f8f8df;
+    --cardBg: #f9f9f9;
+    --textPrimary: #5f5f5f;
+    --textAccent: #84b053;
+}
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -5,7 +13,7 @@
 
 h2{
     margin-bottom: 10px;
-    color: #555555;
+    color: var(--headingColor);
 }
 
 body{
@@ -17,11 +25,11 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #f8f8df;
+    background: var(--bgColor);
 }
 
 #card-container{
-    background: #f9f9f9;
+    background: var(--cardBg);
     width: 300px;
     padding: 15px;
     padding-bottom: 20px;
@@ -41,17 +49,20 @@ body{
     background-size: cover;
     margin-bottom: 20px;
     border-radius: 10px;
-    background-position: -86px 0;
+    background-position-x: -2221px;
+    cursor: grab;
 }
 
+
+
 #priceTag{
-    color: #84b053;
+    color: var(--textAccent);
     font-size: 0.9em;
 }
 
 #descTag{
     margin: 10px 0;
     font-family: 'Dosis', sans-serif;;
-    color: #5f5f5f;
+    color: var(--textPrimary);
     line-height: 1.4em;
 }
