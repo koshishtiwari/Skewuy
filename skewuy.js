@@ -1,10 +1,10 @@
-export class Skewuy{
+export default class Skewuy{
 
     //  argumemts for Skewuy  {viewHeight - height of the Skewuy ,
     //                         frameCount - number of frames,
     //                         frameGutter - gap from left of the sprite ,
     //                         frameWidth - size of each frames,
-    //                         srcImg - url of the image as string
+    //                         srcImg - url of the image  ~ as string
     //                         skewuyContainer - HTML DOM node obtain as queryselector
     //                         }
 
@@ -17,7 +17,7 @@ export class Skewuy{
         this.imgSrc = `url(${srcImg})`;
         this.skewuyParent = skewuyContainer;
         
-        // INIT ~~~~
+        // INIT
         // make sure the css for skewuy is not already there in head
          if (!(document.querySelector(".skewuy"))) {
             
@@ -32,27 +32,72 @@ export class Skewuy{
         } // end of check for previous instantiation
 
         // create the Skewuy Element
-        const skewuyElem = document.createElement("div");
-        skewuyElem.className = "skewuy";
-        skewuyElem.style.backgroundImage = this.imgSrc;
+        this.skewuyElem = document.createElement("div");
+        this.skewuyElem.className = "skewuy";
+        this.skewuyElem.style.backgroundImage = this.imgSrc;
         
         // set width of the skewuy container 100% and add the skewuy to the DOM
         this.skewuyParent.style.width = "100%";
-        this.skewuyParent.appendChild(skewuyElem);
+        this.skewuyParent.appendChild(this.skewuyElem);
 
+        
+        // Interactivity
+        // some constants needed in mouse and touch events
+        const finalWidth = parseInt(getComputedStyle(this.skewuyElem).width);
+        const preBgPos = parseInt(getComputedStyle(this.skewuyElem).backgroundPositionX); 
+        const _skewuy = this; // to use inside event handler
+        
+        // Mouse events
+        this.skewuyElem.addEventListener("mousemove", function(e){
+            // get the x-position of mouse
+            let mousePos = Math.trunc((e.offsetX/finalWidth) * _skewuy.frameCount);
 
+            // make mousePos within 0 and frameCount
+            if (mousePos >= _skewuy.frameCount) {
+                mousePos = _skewuy.frameCount - 1;
+            } else if (mousePos < 0) {
+                mousePos = 0;
+            }
 
-        // events handles
+            let newBgPos = _skewuy.putUnits(preBgPos - (mousePos * _skewuy.frameWidth));
+            _skewuy.skewuyElem.style.backgroundPositionX = newBgPos;
+        })
+
+        // Touch events
+            this.skewuyElem.addEventListener("touchmove", function(e){
+                const targetLeft = e.target.getBoundingClientRect();
+                const touchLeft = e.touches[0].clientX;
+                let touchMove;
+
+                if (touchLeft < targetLeft.left) {
+                    touchMove = 0;
+                } else if (touchLeft > targetLeft.right){
+                    touchMove = targetLeft.right;
+                } else {
+                    touchMove = e.touches[0].clientX - e.target.getBoundingClientRect().left;
+                } 
+                
+                // get the x-position of touch
+                let touchPos = Math.trunc(((touchMove)/finalWidth) * _skewuy.frameCount);
+
+                // make touchPos within 0 and frameCount
+                if (touchPos >= _skewuy.frameCount) {
+                    touchPos = _skewuy.frameCount - 1;
+                } else if (touchPos < 0) {
+                    touchPos = 0;
+                }
+
+                let newBgPos = _skewuy.putUnits(preBgPos - (touchPos * _skewuy.frameWidth));
+                _skewuy.skewuyElem.style.backgroundPositionX = newBgPos;
+
+        })
         
     } // constructor
 
 
-
-
-
-
-    // method to put units to use in css
+    // method to append "px" at the end of values - to use in css
     putUnits(value) {
         return value + "px";
     }
+    
 }
