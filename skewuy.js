@@ -1,4 +1,4 @@
-export default class Skewuy{
+export class Skewuy{
 
     //  argumemts for Skewuy  {viewHeight - height of the Skewuy ,
     //                         frameCount - number of frames,
