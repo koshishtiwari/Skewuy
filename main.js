@@ -1,4 +1,4 @@
-import {Skewuy} from "./skewuy.js"
+import {Skewuy} from "./dev/skewuy.js"
 
 // window load
 window.onload = function (){
