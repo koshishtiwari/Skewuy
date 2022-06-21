@@ -1,6 +1,6 @@
 :root{
     --headingColor: #555555;
-    --bgColor: #f8f8df;
+    --bgColor: hsl(60deg 100% 96%);
     --cardBg: #f6f6f6;
     --textPrimary: #4b4b4b;
     --textCard: #6e6e6e;
@@ -36,7 +36,6 @@ code{
     border-radius: 4px;
     color: #85856a;
     padding: 1px 3px;
-    line-break: anywhere;
 }
 
 body{
@@ -104,6 +103,7 @@ a.button:hover{
 #card-container > div{
     margin-bottom: 15px;
     border-radius: 10px;
+    cursor: grab;
 }
 
 #priceTag{
@@ -134,10 +134,11 @@ a.button:hover{
 }
 
 .codeBox{
-    background-color: #ffffed;
+    background-color: #ededd1;
     padding: 10px;
     border-radius: 5px;
     margin-top: 10px;
+    overflow: auto;
 }
 
 .codeBox code{
