@@ -8,20 +8,24 @@
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Source+Code+Pro&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <section id="head">
         <h1>Skewuy.js</h1>
-        <p>Add 3D rotation feel without the need of rendering the whole 3D object on your webpage. Built-in touch and mouse interactivity.</p>
-        <div id="button-implement">
-            <p>View Implementation</p>
+        <p>Add 3D rotation feel without the need of rendering the whole 3D object on your webpage.</p>
+        <div id="btnContainer">
+                <a class="button" href="#implement">View Implementation</a>
+                <a class ="button" target="_blank" href="https://github.com/Jeigsaw/Skewuy/tree/main/dev">Fork on Github</a>
         </div>
+        <p>Preview the demo below</p>
+        
     </section>
+
 
     <div id="cards-grid">
         <section id="card-container">
-            <div id="skewuyContainer" style="background-color: #95d5d9;> 
+            <div id="skewuyContainer" style="background-color: #95d5d9;"> 
                 
             </div>
             <h2>Sneakers</h2>
@@ -45,13 +49,67 @@
             <p id="descTag">Add a mix of classic and bright colors to your drinkware with this Cup Vermont. Perfect to enjoy both hot and cold beverages alone or with a loved one.</p>
         </section>
     </div>
+    
+    <section id="implement">
+        <h2>Implementation & Usage</h2>
+        <ul id="usageList">
+            <li>
+                Download the latest <code>skewuy.min.js</code> from this <a target="_blank" href="https://github.com/Jeigsaw/Skewuy/tree/main/build/0.9.0">Github repo</a> and place it in your project directory.
+            </li>
+            <li>
+                Add the following tag within <code>head</code> or <code>body</code> of your <code>index.html</code> This reference should be placed before the reference to the main javascript of your page.
+                <div class="codeBox">
+                    <p><code class="codeTags">&ltbody&gt</code></p>
+                    <p style="padding-left: 15px;"><code>...</code></p>
+                    <p style="padding-left: 15px;"><code><span class="codeTags">&ltscript</span> <span class="codeAttr">src</span> = "./skewuy.min.js"<span class="codeTags">&gt&lt/script&gt</span></code></p> 
+                    <p style="padding-left: 15px;"><code><span class="codeTags">&ltscript</span> <span class="codeAttr">src</span> = "main.js"<span class="codeTags">&gt&lt/script&gt</span></code></p> 
+                    <p><code class="codeTags">&lt/body&gt</code></p>
+                </div>
+            </li>
+            <li>
+                Create a container for Skewuy Element in your HTML document.
+                <div class="codeBox">
+                    <p><code class="codeTags">&ltbody&gt</code></p>
+                    <p style="padding-left: 15px;"><code>...</code></p>
+                    <p style="padding-left: 15px;"><code><span class="codeTags">&ltdiv</span> <span class="codeAttr">id</span> = "skewuyContainer"<span class="codeTags">&gt&lt/div&gt</span></code></p> 
+                    <p style="padding-left: 15px;"><code>...</code></p>
+                </div>
+            </li>
+            <li>
+                You need a spritesheet that contains the ordered sequence of images. The dimension of each image in the spritesheet is currently set to <code>1920 x 1080 px</code>
+            </li>
+            <li>
+                On your <code>main.js</code> define the following to use as Skewuy properties.
+                <div class="codeBox">
+                    <p><code class="codeComments">// Height of the Skewuy Element</code></p>
+                    <p><code class="codeComments">// The height should be at least 200 for better experience</code></p>
+                    <p><code><span class="codeKeywords">const</span> <span class="codeNames">skHeight</span> = 200;</code></p><br/>
 
-    <section id="document">
-        <h3>Implementation & Usage</h3>
-        <p>Download the Skewuy.min.js from <a href="">Github repo</a></p>
+                    <p><code class="codeComments">// Number of frames in the spritesheet</code></p>
+                    <p><code><span class="codeKeywords">const</span> <span class="codeNames">skframeCount</span> = 15;</code></p> <br/> 
+
+                    <p><code class="codeComments">// Gap from left of the spritesheet</code></p>
+                    <p><code><span class="codeKeywords">const</span> <span class="codeNames">skframeGutter</span> = 86;</code></p> <br/> 
+
+                    <p><code class="codeComments">// URL of the spritesheet image</code></p>
+                    <p><code><span class="codeKeywords">const</span> <span class="codeNames">spriteImg</span> = "./res/sprite.jpg";</code></p> <br/>
+                    
+                    <p><code class="codeComments">// Skewuy Container Element created previously</code></p>
+                    <p><code><span class="codeKeywords">const</span> <span class="codeNames">skContainer</span> = document.<span class="codeNames">getElementById</span>("skewuyContainer");</code></p>
+                </div>
+            </li>
+            <li>
+                Instantiate Skewuy and pass the above declared params.
+                <div class="codeBox">
+                    <p><code><span class="codeKeywords">const</span> <span class="codeNames">skewuy1</span> = <span class="codeKeywords">new </span>Skewuy(<span class="codeParams">skHeight, skframeCount, skframeGutter, spriteImg, skContainer</span>);</code></p>
+                </div>
+            </li>
+            <li>And you're done!</li>
+        </ul>
+        
     </section>
     
-    <script src="build/0.9.0/skewuy.min.js"></script>
-    <script src="main.js" type="module"></script>
+    <script src="/build/0.9.0/skewuy.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
