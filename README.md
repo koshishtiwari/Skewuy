@@ -1,2 +1,0 @@
-# Skewuy
-Swipe to Rotate!
