@@ -36,7 +36,6 @@ code{
     border-radius: 4px;
     color: #85856a;
     padding: 1px 3px;
-    line-break: anywhere;
 }
 
 body{
@@ -138,6 +137,7 @@ a.button:hover{
     padding: 10px;
     border-radius: 5px;
     margin-top: 10px;
+    overflow: auto;
 }
 
 .codeBox code{
