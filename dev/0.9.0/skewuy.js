@@ -5,14 +5,14 @@ class Skewuy{
     //                         frameGutter - gap from left of the sprite ,
     //                         frameWidth - size of each frames,
     //                         srcImg - url of the image  ~ as string
-    //                         skewuyContainer - HTML DOM node obtain as queryselector
+    //                         skewuyContainer - HTML DOM node
     //                         }
 
-    constructor(viewHeight = 200, frameCount, frameGutter = -86, frameWidth = 427, srcImg, skewuyContainer){
+    constructor(viewHeight = 200, frameCount, frameGutter = 86, frameWidth = 427, srcImg, skewuyContainer){
         this.height = this.putUnits(viewHeight);
         this.width = "100%";
         this.frameCount = frameCount;
-        this.frameGutter = this.putUnits(frameGutter);
+        this.frameGutter = this.putUnits(-1* frameGutter);
         this.frameWidth = frameWidth;
         this.imgSrc = `url(${srcImg})`;
         this.skewuyParent = skewuyContainer;
