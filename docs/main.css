@@ -1,0 +1,190 @@
+:root{
+    --headingColor: #555555;
+    --bgColor: hsl(60deg 100% 96%);
+    --cardBg: #f6f6f6;
+    --textPrimary: #4b4b4b;
+    --textCard: #6e6e6e;
+    --textAccent: #84b053;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h2,h1{
+    margin-bottom: 10px;
+    color: var(--headingColor);
+    margin-top: 10px;
+}
+
+a{
+    color: var(--textAccent);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: var(--textAccent);
+}
+
+code{
+    font-family: 'Source Code Pro', monospace;
+    line-height: 1.3rem;
+    background-color: #ddddc1;
+    border-radius: 4px;
+    color: #85856a;
+    padding: 1px 3px;
+}
+
+body{
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    background: var(--bgColor);
+    color: var(--textPrimary);
+    line-height: 1.4rem;
+}
+
+#head{
+    padding: 10px 15px;
+}
+
+#btnContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 15px 0;
+
+}
+
+a.button{
+    border-radius: 10px;
+    border: 1px solid var(--headingColor);
+    color: var(--headingColor);
+    text-decoration: none;
+    padding: 8px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.2s ease-in;
+    margin-bottom: 10px;
+}
+
+a.button:hover{
+    background: #ddddc1;
+    color: var(--headingColor);
+    transition: all 0.2s ease-out;
+}
+
+#cards-grid{
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    margin: 25px 0;
+}
+ 
+#card-container{
+    background: var(--cardBg);
+    width: 300px;
+    padding: 15px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px 0px #b1b19b69;
+}
+
+#card-container > div{
+    margin-bottom: 15px;
+    border-radius: 10px;
+    cursor: grab;
+}
+
+#priceTag{
+    color: var(--textAccent);
+    font-size: 0.9em;
+}
+
+#descTag{
+    margin: 10px 0;
+    font-family: 'Dosis', sans-serif;
+    line-height: 1.4em;
+    color: var(--textCard);
+}
+
+#implement{
+    padding: 10px 15px;
+}
+#implement h2{
+    border-bottom: 0.1rem solid var(--headingColor);
+    padding-bottom: 10px;
+    width: fit-content;
+    margin-bottom: 25px;
+}
+
+#usageList li{
+    margin-bottom: 15px;
+    list-style-type: circle;
+}
+
+.codeBox{
+    background-color: #ededd1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: auto;
+}
+
+.codeBox code{
+    background-color: transparent;
+}
+
+.codeBox .codeTags{
+    color: hsl(113deg 31% 49%);
+}
+.codeBox .codeAttr{
+    color: hsl(273deg 31% 49%);
+}
+.codeBox .codeComments{
+    color: hsl(60deg 6% 58%);
+}
+.codeBox .codeKeywords{
+    color: hsl(0deg 60% 67%);
+}
+.codeBox .codeNames{
+    color: hsl(205deg 60% 67%);
+}
+.codeBox .codeParams{
+    color: hsl(221deg 34% 63%);;
+}
+
+
+
+@media screen and (max-width:1000px) {
+    #cards-grid{
+        grid-template-columns: auto auto;
+    }
+
+}
+
+
+
+@media screen and (max-width:500px) {
+    body{
+        width: 100%;
+    }   
+
+    #cards-grid{
+        grid-template-columns: auto;
+    }
+
+    #btnContainer{
+        flex-direction: column;
+    }
+}
