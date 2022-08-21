@@ -1,6 +1,4 @@
 // window load
-import skewuy from './../skewuy.js';
-
 window.onload = function (){
     const parent = document.querySelector("#skewuyContainer");
     skewuy({
