@@ -1,3 +1,4 @@
+import skewuy from './../skewuy.js'
 // window load
 window.onload = function (){
     const parent = document.querySelector("#skewuyContainer");
@@ -6,7 +7,7 @@ window.onload = function (){
         frameCount: 12, 
         frameGutter: 86, 
         frameWidth: 427, 
-        srcImg: "../../docs/assets/spriteer.png", 
+        srcImg: "../../docs/assets/sneaker.png", 
         skewuyContainer: parent
     })
 
@@ -18,7 +19,7 @@ window.onload = function (){
         frameCount: 15, 
         frameGutter: 86, 
         frameWidth: 427, 
-        srcImg: "../../docs/assets/cup_sprite.png", 
+        srcImg: "../../docs/assets/cup.png", 
         skewuyContainer: parent2
     })
     // const skewuy2 = new Skewuy(200, 15,86,427,"../../docs/assets/cup_sprite.png",parent2);
@@ -29,7 +30,7 @@ window.onload = function (){
         frameCount: 12, 
         frameGutter: 86, 
         frameWidth: 427, 
-        srcImg: "../../docs/assets/cuptwelve.png", 
+        srcImg: "../../docs/assets/toyota.png", 
         skewuyContainer: parent3
     })
     // const skewuy3 = new Skewuy(200, 12,86,427,"../../docs/assets/cuptwelve.png",parent3);
