@@ -14,7 +14,7 @@ Using CDN:
 
 Copy the following script tag into your index.html
 
-`<script src="unpkg.com/skewuy"></script>`
+`<script src="https://unpkg.com/skewuy"></script>`
 
 Add following lines into the main js of your project
 
