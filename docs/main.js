@@ -1,6 +1,3 @@
-import skewuy from 'skewuy';
-
-
 window.onload = function (){
     const parent = document.querySelector("#skewuyContainer");
     skewuy({
