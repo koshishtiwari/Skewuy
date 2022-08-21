@@ -14,7 +14,7 @@ Using CDN:
 
 Copy the following script tag into your index.html
 
-`<script src="available soon"></script>`
+`<script src="unpkg.com/skewuy"></script>`
 
 Add following lines into the main js of your project
 
@@ -37,7 +37,7 @@ skewuy({
 ```
 
 ### The parameter object
-skewuy expects a parameter object with following keys:
+skewuy expects a parameter object shown below
 
 * *viewHeight* - height of the Skewuy | default 200,
 * *frameCount* - number of frames in the sprite image,
