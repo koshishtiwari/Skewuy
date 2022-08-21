@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Jeigsaw/Skewuy/issues"
   },
-  "homepage": "https://jeigsaw.github.io/Skewuy/"
+  "homepage": "https://jeigsaw.github.io/Skewuy/",
+  "dependencies": {
+    "skewuy": "^1.0.1"
+  }
 }
