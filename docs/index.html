@@ -55,14 +55,15 @@
         <h2>Implementation & Usage</h2>
         <ul id="usageList">
             <li>
-                Download the latest <code>skewuy.min.js</code> from this <a target="_blank" href="https://github.com/Jeigsaw/Skewuy/tree/main/build/0.9.0">Github repo</a> and place it in your project directory.
-            </li>
-            <li>
-                Add the following tag within <code>head</code> or <code>body</code> of your <code>index.html</code> This reference should be placed before the reference to the main javascript of your page.
+                <p>If you are using npm</p>
+                <pre><code>npm install skewuy</code></pre>
+                <br>
+                <p>Or, if you use CDN</p>
+                <p> Add the following tag within <code>head</code> or <code>body</code> of your <code>index.html</code> This reference should be placed before the reference to the main javascript of your page.</p>
                 <div class="codeBox">
                     <p><code class="codeTags">&ltbody&gt</code></p>
                     <p style="padding-left: 15px;"><code>...</code></p>
-                    <p style="padding-left: 15px;"><code><span class="codeTags">&ltscript</span> <span class="codeAttr">src</span> = "./skewuy.min.js"<span class="codeTags">&gt&lt/script&gt</span></code></p> 
+                    <p style="padding-left: 15px;"><code><span class="codeTags">&ltscript</span> <span class="codeAttr">src</span> = "https://unpkg.com/skewuy"<span class="codeTags">&gt&lt/script&gt</span></code></p> 
                     <p style="padding-left: 15px;"><code><span class="codeTags">&ltscript</span> <span class="codeAttr">src</span> = "main.js"<span class="codeTags">&gt&lt/script&gt</span></code></p> 
                     <p><code class="codeTags">&lt/body&gt</code></p>
                 </div>
@@ -84,14 +85,20 @@
                 <div class="codeBox">
                     <p><code class="codeComments">// Height of the Skewuy Element</code></p>
                     <p><code class="codeComments">// The height should be at least 200 for better experience</code></p>
+                    <p><code class="codeComments">// The default value is set to 200</code></p>
                     <p><code><span class="codeKeywords">const</span> <span class="codeNames">skHeight</span> = 200;</code></p><br/>
 
                     <p><code class="codeComments">// Number of frames in the spritesheet</code></p>
                     <p><code><span class="codeKeywords">const</span> <span class="codeNames">skframeCount</span> = 15;</code></p> <br/> 
 
                     <p><code class="codeComments">// Gap from left of the spritesheet</code></p>
+                    <p><code class="codeComments">// The default value is set to 86</code></p>
                     <p><code><span class="codeKeywords">const</span> <span class="codeNames">skframeGutter</span> = 86;</code></p> <br/> 
 
+                    <p><code class="codeComments">// Width of each frames in spritesheet</code></p>
+                    <p><code class="codeComments">// The default value is set to 427</code></p>
+                    <p><code><span class="codeKeywords">const</span> <span class="codeNames">skframeWidth</span> = 427;</code></p> <br/> 
+                    
                     <p><code class="codeComments">// URL of the spritesheet image</code></p>
                     <p><code><span class="codeKeywords">const</span> <span class="codeNames">spriteImg</span> = "./res/sprite.jpg";</code></p> <br/>
                     
@@ -100,9 +107,28 @@
                 </div>
             </li>
             <li>
-                Instantiate Skewuy and pass the above declared params.
+                If you are using npm, add the following import statement before calling skewuy
                 <div class="codeBox">
-                    <p><code><span class="codeKeywords">const</span> <span class="codeNames">skewuy1</span> = <span class="codeKeywords">new </span>Skewuy(<span class="codeParams">skHeight, skframeCount, skframeGutter, spriteImg, skContainer</span>);</code></p>
+                    <p><code><span class="codeKeywords">import</span> <span class="codeNames">skewuy</span> <span class="codeKeywords">from </span>'skewuy'</code></p>
+                </div>
+            </li>
+            <li>
+                Call skewuy with the above defined parameters
+                <div class="codeBox">
+                    <p><code><span class="codeKeywords">skewuy(</span><span class="codeNames">{</span> <span class="codeNames">viewHeight:</span> skHeight,
+                        <br>
+                        <span class="codeNames" style="padding-left: 20px;">frameCount:</span> skframeCount,
+                        <br>
+                        <span class="codeNames" style="padding-left: 20px;">frameGutter:</span> skframeGutter,
+                        <br>
+                        <span class="codeNames" style="padding-left: 20px;">frameWidth:</span> skFrameWidth,
+                        <br>
+                        <span class="codeNames" style="padding-left: 20px;">srcImg:</span> spriteImg,
+                        <br>
+                        <span class="codeNames" style="padding-left: 20px;">skewuyContainer:</span> skContainer
+                        <br>
+                        <span class="codeNames">}</span><span class="codeKeywords">)</span>;</code>
+                    </p>
                 </div>
             </li>
             <li>And you're done!</li>

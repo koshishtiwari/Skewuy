@@ -1,6 +1,6 @@
 {
   "name": "skewuy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Add 3D rotation feel without the need of rendering the whole 3D object on your webpage.",
   "main": "./build/skewuy.min.js",
   "directories": {
