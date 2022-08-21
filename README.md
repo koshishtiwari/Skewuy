@@ -1,21 +1,25 @@
 # Skewuy
 Add 3D rotation feel without the need of rendering the whole 3D object on your webpage.
 
-Demo : (https://jeigsaw.github.io/Skewuy/)
+Demo : https://jeigsaw.github.io/Skewuy/
 
 
 ## Implementation
 
 Using npm:
+
 `npm i skewuy`
 
 Using CDN:
+
 Copy the following script tag into your index.html
-`<script src="available soon"></script>`
+
+`<script src="unpkg.com/skewuy"></script>`
 
 Add following lines into the main js of your project
 
 ```
+// if using npm
 import skewuy from 'skewuy';
 
 // create a container in your HTML document and load it here
@@ -33,7 +37,7 @@ skewuy({
 ```
 
 ### The parameter object
-skewuy expects a parameter object with following keys:
+skewuy expects a parameter object shown below
 
 * *viewHeight* - height of the Skewuy | default 200,
 * *frameCount* - number of frames in the sprite image,
