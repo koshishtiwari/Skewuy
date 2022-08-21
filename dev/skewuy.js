@@ -1,14 +1,18 @@
+// Params for skewuy()
+// { 
+//   viewHeight - height of the Skewuy | default 200,
+//   frameCount - number of frames in the sprite image,
+//   frameGutter - gap from left of the sprite image | default 86,
+//   frameWidth - size of each frames | default 427,
+//   srcImg - url of the image  ~ as string
+//   skewuyContainer - HTML DOM node
+// }
+
+
 class Skewuy{
 
-    //  argumemts for Skewuy  {viewHeight - height of the Skewuy ,
-    //                         frameCount - number of frames,
-    //                         frameGutter - gap from left of the sprite ,
-    //                         frameWidth - size of each frames,
-    //                         srcImg - url of the image  ~ as string
-    //                         skewuyContainer - HTML DOM node
-    //                         }
 
-    constructor(viewHeight = 200, frameCount, frameGutter = 86, frameWidth = 427, srcImg, skewuyContainer){
+    constructor(viewHeight, frameCount, frameGutter, frameWidth, srcImg, skewuyContainer){
         this.height = this.putUnits(viewHeight);
         this.width = "100%";
         this.frameCount = frameCount;
@@ -101,3 +105,15 @@ class Skewuy{
     }
     
 }
+
+function skewuy (params){
+    // the default values
+    if(!params.viewHeight) {params.viewHeight = 200};
+    if(!params.frameGutter) {params.frameGutter = 86};
+    if(!params.frameWidth){ params.frameWidth = 427};
+
+    new Skewuy(params.viewHeight, params.frameCount, params.frameGutter, params.frameWidth, params.srcImg, params.skewuyContainer)
+}
+
+// module.exports.skewuy = skewuy;
+export default skewuy;
