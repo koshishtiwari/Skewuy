@@ -112,7 +112,7 @@ function skewuy (params){
     if(!params.frameGutter) {params.frameGutter = 86};
     if(!params.frameWidth){ params.frameWidth = 427};
 
-    new Skewuy(params.viewHeight, params.frameCount, params.frameGutter, params.frameWidth, params.srcImg, params.skewuyContainer)
+    return new Skewuy(params.viewHeight, params.frameCount, params.frameGutter, params.frameWidth, params.srcImg, params.skewuyContainer)
 }
 
 // module.exports.skewuy = skewuy;
