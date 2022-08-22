@@ -56,15 +56,18 @@
         <ul id="usageList">
             <li>
                 <p>If you are using npm</p>
-                <pre><code>npm install skewuy</code></pre>
+                <div class="codeBox">
+                    <p><code>npm install skewuy</code></p>
+                </div>
+                
                 <br>
                 <p>Or, if you use CDN</p>
                 <p> Add the following tag within <code>head</code> or <code>body</code> of your <code>index.html</code> This reference should be placed before the reference to the main javascript of your page.</p>
                 <div class="codeBox">
                     <p><code class="codeTags">&ltbody&gt</code></p>
                     <p style="padding-left: 15px;"><code>...</code></p>
-                    <p style="padding-left: 15px;"><code><span class="codeTags">&ltscript</span> <span class="codeAttr">src</span> = "https://unpkg.com/skewuy"<span class="codeTags">&gt&lt/script&gt</span></code></p> 
-                    <p style="padding-left: 15px;"><code><span class="codeTags">&ltscript</span> <span class="codeAttr">src</span> = "main.js"<span class="codeTags">&gt&lt/script&gt</span></code></p> 
+                    <p style="padding-left: 15px;"><code><span class="codeTags">&ltscript</span> <span class="codeAttr">src</span> = "https://unpkg.com/skewuy"<span class="codeTags">&gt &lt/script&gt</span></code></p> 
+                    <p style="padding-left: 15px;"><code><span class="codeTags">&ltscript</span> <span class="codeAttr">src</span> = "main.js"<span class="codeTags">&gt &lt/script&gt</span></code></p> 
                     <p><code class="codeTags">&lt/body&gt</code></p>
                 </div>
             </li>
@@ -73,7 +76,7 @@
                 <div class="codeBox">
                     <p><code class="codeTags">&ltbody&gt</code></p>
                     <p style="padding-left: 15px;"><code>...</code></p>
-                    <p style="padding-left: 15px;"><code><span class="codeTags">&ltdiv</span> <span class="codeAttr">id</span> = "skewuyContainer"<span class="codeTags">&gt&lt/div&gt</span></code></p> 
+                    <p style="padding-left: 15px;"><code><span class="codeTags">&ltdiv</span> <span class="codeAttr">id</span> = "skewuyContainer"<span class="codeTags">&gt &lt/div&gt</span></code></p> 
                     <p style="padding-left: 15px;"><code>...</code></p>
                 </div>
             </li>
@@ -109,7 +112,7 @@
             <li>
                 If you are using npm, add the following import statement before calling skewuy
                 <div class="codeBox">
-                    <p><code><span class="codeKeywords">import</span> <span class="codeNames">skewuy</span> <span class="codeKeywords">from </span>'skewuy'</code></p>
+                    <p><code><span class="codeKeywords">import</span> <span class="codeNames">skewuy</span> <span class="codeKeywords">from </span>'skewuy'</code>;</p>
                 </div>
             </li>
             <li>
@@ -135,6 +138,9 @@
         </ul>
         
     </section>
+    <footer>
+        <p>with &#10084 from <a href="https://codepen.io/Jeigsaw" target="_blank">jeigsaw</a> and <a target="_blank" href="https://koshishtiwari.vercel.app/">koshish</a></p>
+    </footer>
     
     <script src="https://unpkg.com/skewuy"></script>
     <script src="main.js"></script>
