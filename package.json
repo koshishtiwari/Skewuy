@@ -1,0 +1,28 @@
+{
+  "name": "skewuy",
+  "version": "1.1.0",
+  "description": "Add 3D rotation feel without the need of rendering the whole 3D object on your webpage.",
+  "main": "./build/skewuy.min.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeigsaw/Skewuy.git"
+  },
+  "keywords": [
+    "3D",
+    "3Drotation",
+    "css"
+  ],
+  "author": "jeigsaw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jeigsaw/Skewuy/issues"
+  },
+  "unpkg" : "./umd/skewuy.min.js",
+  "homepage": "https://jeigsaw.github.io/Skewuy/"
+}

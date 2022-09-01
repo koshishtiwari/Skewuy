@@ -21,7 +21,6 @@ h2,h1{
 a{
     color: var(--textAccent);
     text-decoration: none;
-    font-weight: bold;
 }
 
 a:hover{
@@ -34,7 +33,7 @@ code{
     line-height: 1.3rem;
     background-color: #ddddc1;
     border-radius: 4px;
-    color: #85856a;
+    color: #3d3d09;
     padding: 1px 3px;
 }
 
@@ -152,16 +151,16 @@ a.button:hover{
     color: hsl(273deg 31% 49%);
 }
 .codeBox .codeComments{
-    color: hsl(60deg 6% 58%);
+    color: hsl(60deg 2% 53%);
 }
 .codeBox .codeKeywords{
-    color: hsl(0deg 60% 67%);
+    color: hsl(0deg 31% 57%);
 }
 .codeBox .codeNames{
-    color: hsl(205deg 60% 67%);
+    color: hsl(205deg 38% 47%);
 }
 .codeBox .codeParams{
-    color: hsl(221deg 34% 63%);;
+    color: hsl(185deg 46% 32%);
 }
 
 
@@ -187,4 +186,9 @@ a.button:hover{
     #btnContainer{
         flex-direction: column;
     }
+}
+
+footer{
+    padding: 6px;
+    border-top: 1px solid var(--textPrimary);
 }

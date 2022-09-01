@@ -1,11 +1,38 @@
+import skewuy from './../skewuy.js'
 // window load
 window.onload = function (){
     const parent = document.querySelector("#skewuyContainer");
-    const skewuy1 = new Skewuy(200, 12,86,427,"../../assets/sneaker.png",parent);
+    skewuy({
+        viewHeight: 200,
+        frameCount: 12, 
+        frameGutter: 86, 
+        frameWidth: 427, 
+        srcImg: "../../docs/assets/sneaker.png", 
+        skewuyContainer: parent
+    })
+
+    // const skewuy1 = new Skewuy(200, 12,86,427,"../../docs/assets/spriteer.png",parent);
 
     const parent2 = document.querySelector("#skewuyContainer2");
-    const skewuy2 = new Skewuy(200, 15,86,427,"../../assets/cup.png",parent2);
+    skewuy({
+        viewHeight: 200,
+        frameCount: 15, 
+        frameGutter: 86, 
+        frameWidth: 427, 
+        srcImg: "../../docs/assets/cup.png", 
+        skewuyContainer: parent2
+    })
+    // const skewuy2 = new Skewuy(200, 15,86,427,"../../docs/assets/cup_sprite.png",parent2);
 
     const parent3 = document.querySelector("#skewuyContainer3");
-    const skewuy3 = new Skewuy(250, 15,86,427,"../../assets/toyota.png",parent3);
+    skewuy({
+        viewHeight: 200,
+        frameCount: 12, 
+        frameGutter: 86, 
+        frameWidth: 427, 
+        srcImg: "../../docs/assets/toyota.png", 
+        skewuyContainer: parent3
+    })
+    // const skewuy3 = new Skewuy(200, 12,86,427,"../../docs/assets/cuptwelve.png",parent3);
+
 }
