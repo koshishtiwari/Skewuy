@@ -1,5 +1,7 @@
 # Skewuy 
+
 (Swipe to Rotate!) 
+
 Add a 3D rotation functionality to images without the need of uploading and rendering the 3D objects on your webpage.
 
 Demo : https://Skewuy.vercel.app/
@@ -9,7 +11,7 @@ Demo : https://Skewuy.vercel.app/
 
 Using npm:
 
-`npm i skewuy`
+`npm install skewuy`
 
 Using CDN:
 
