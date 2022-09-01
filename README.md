@@ -1,7 +1,8 @@
-# Skewuy
-Add 3D rotation feel without the need of rendering the whole 3D object on your webpage.
+# Skewuy 
+(Swipe to Rotate!) 
+Add a 3D rotation functionality to images without the need of uploading and rendering the 3D objects on your webpage.
 
-Demo : https://jeigsaw.github.io/Skewuy/
+Demo : https://Skewuy.vercel.app/
 
 
 ## Implementation
