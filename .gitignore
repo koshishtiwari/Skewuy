@@ -1,3 +1,5 @@
 umd/
 node_modules/
 .npmignore
+
+TODOS.md
